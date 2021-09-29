@@ -1,6 +1,7 @@
 import express from "express";
 import serverless from "serverless-http";
 
+const data = require("./data");
 const app = express();
 const router = express.Router();
 
