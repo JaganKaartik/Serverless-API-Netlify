@@ -1,4 +1,14 @@
-const spacexLaunches = [
+interface ISpacexData {
+  flight_number: number;
+  mission_name: string;
+  status: string;
+  launch_year: string;
+  rocket: { rocket_id: string; orbit: string };
+  launch_site: { site_name: string };
+  cost: number;
+}
+
+const spacexLaunches: ISpacexData[] = [
   {
     flight_number: 1,
     mission_name: "FalconSat",
