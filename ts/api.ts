@@ -1,9 +1,10 @@
 import express from "express";
 import serverless from "serverless-http";
 
-const data = require("./data");
 const app = express();
 const router = express.Router();
+
+// const data = require("./data");
 
 router.get("/", (req, res) => {
   res.json({
@@ -11,9 +12,9 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/data/all", (req, res) => {
-  res.send(data);
-});
+// router.get("/data/all", (req, res) => {
+//   res.send(data);
+// });
 
 app.use(`/.netlify/functions/api`, router);
 
