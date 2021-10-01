@@ -4,11 +4,11 @@ WORKDIR /src
 
 COPY package*.json ./
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
-RUN npm run tsbuild
+RUN yarn tsbuild
 
 EXPOSE 9000
 
